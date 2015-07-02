@@ -22,19 +22,6 @@ OpenSeadragonPlayer.utils: {
   makeID: function(prefix) {
     return prefix + "-" + OpenSeadragonPlayer.utils.generateUUID();
   },
-  // Add a value onto a space-separated attribute
-  pushAttr: function($, elem, attrName, newAttrValue) {
-    var attrValues = [],
-    readAttr = $(elem).attr(attrName);
-    if (!!readAttr) {
-      attrValues = readAttr.split(' ');
-    }
-    attrValues.push(newAttrValue);
-    $(elem).attr(
-      attrName,
-      attrValues.join(' ')
-    )
-  },
   // Round a decimal number to a number of digits
   roundDecimal: function(num, digits) {
     if (digits <= 0) return num;
